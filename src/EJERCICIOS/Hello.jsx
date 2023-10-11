@@ -8,5 +8,5 @@ function Hello() {
     </div>
     );
   }
-  
+  // PENSE QUE EL EJERCICIO 12 ERA ESTO :D , pero vamos que lo he entendido
   export default Hello;
