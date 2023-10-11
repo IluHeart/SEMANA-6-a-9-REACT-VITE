@@ -1,5 +1,5 @@
 import Hello from "./Ejercicios/Hello";
-import Message from "./Message";
+import Message from "./EJERCICIOS/Message";
 
 function App() {
   return (
