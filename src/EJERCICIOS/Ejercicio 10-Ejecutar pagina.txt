@@ -1,0 +1,1 @@
+Procedo a ejecutar el programa usando "npm run dev" en la consola
