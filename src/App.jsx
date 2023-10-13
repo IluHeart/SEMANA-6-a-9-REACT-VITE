@@ -3,11 +3,12 @@ import Message from "./EJERCICIOS/Message";
 import Bienvenido from "./EJERCICIOS/Bienvenido";
 
 function App() {
+  let name = "John";
   return (
     <div className="App">
       <Hello/>
       <Message/>
-      <Bienvenido name={<strong>Ilies</strong>} age={21} />
+      <Bienvenido name={name} age={21} />
     </div>
   );
 }

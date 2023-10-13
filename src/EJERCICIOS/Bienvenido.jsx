@@ -4,9 +4,11 @@ const Bienvenido = (props) => {
    const isAgeValid = props.age > 18 && props.age < 65;
    console.log(isAgeValid);
 
+   const isNameValid = props.name === 'John';
+
   return (
     <div>
-      <p>Bienvenido, {props.name || <strong>HipHop</strong>}</p>
+      <p>Bienvenido, {isNameValid ? <strong>{props.name}</strong> : <strong>HipHop</strong>}!</p>
        {isAgeValid && <Edad age={props.age} />}
     </div>
   );
