@@ -1,7 +1,7 @@
 const Bienvenido = (props) => {
   return (
     <div>
-      <p>Welcome, {props.name || "guest"}!</p>
+      <p>Bienvenido, {props.name || <strong>HipHop</strong>}!</p>
       {props.age && <p>Tu edad es {props.age}.</p>}
     </div>
   );
