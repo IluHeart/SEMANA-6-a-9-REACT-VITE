@@ -4,7 +4,7 @@ const Bienvenido = (props) => {
   return (
     <div>
       <p>Bienvenido, {props.name || <strong>HipHop</strong>}</p>
-      {props.age && <Edad age={props.age} />}
+      {props.age && props.age > 18 && <Edad age={props.age} />}
     </div>
   );
 };
