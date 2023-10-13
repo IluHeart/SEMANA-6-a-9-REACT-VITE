@@ -1,12 +1,13 @@
 import Hello from "./Ejercicios/Hello";
 import Message from "./EJERCICIOS/Message";
+import Bienvenido from "./EJERCICIOS/Bienvenido";
 
 function App() {
   return (
     <div className="App">
       <Hello/>
       <Message/>
-      <Hello />
+      <Bienvenido name={"Ilies"}/>
     </div>
   );
 }
