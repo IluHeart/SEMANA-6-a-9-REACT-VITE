@@ -1,6 +1,6 @@
 function Message() {
     return (
-      <p>What a beautiful day!</p>
+      <p>Que dia mas maravilloso!!</p>
     );
   }
   

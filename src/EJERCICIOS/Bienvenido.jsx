@@ -1,8 +1,10 @@
+import Edad from "./Edad"
+
 const Bienvenido = (props) => {
   return (
     <div>
-      <p>Bienvenido, {props.name || <strong>HipHop</strong>}!</p>
-      {props.age && <p>Tu edad es {props.age}.</p>}
+      <p>Bienvenido, {props.name || <strong>HipHop</strong>}</p>
+      {props.age && <Edad age={props.age} />}
     </div>
   );
 };
