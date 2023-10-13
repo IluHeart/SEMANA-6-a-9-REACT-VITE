@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Hello/>
       <Message/>
-      <Bienvenido name={name} age={21} />
+      <Bienvenido name={name} />
     </div>
   );
 }
