@@ -5,6 +5,7 @@ import AlertClock from "./EJERCICIOS/AlertClock"
 import Counter from "./EJERCICIOS/Counter";
 import Clock from "./EJERCICIOS/Clock";
 import MouseClicker from "./EJERCICIOS/MouseClicker";
+import MultiButton from "./EJERCICIOS/MultiButton"
 
 function App() {
   const initialValue = 0;
@@ -24,6 +25,7 @@ function App() {
       <Counter initialValue={initialValue} decrementAmount={decrementAmount} incrementAmount={incrementAmount}  />
       <Clock/>
       <MouseClicker name="one" />
+      <MultiButton/>
     </div>
   );
 }
