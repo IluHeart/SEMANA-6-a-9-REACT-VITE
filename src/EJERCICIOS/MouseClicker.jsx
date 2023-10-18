@@ -3,9 +3,17 @@ const MouseClicker = ({ name }) => {
     console.log("Boton click:", event.target.name);
   };
 
+  const handleImageClick = (event) => {
+    console.log("Img click, src:", event.target.src);
+  };
+
   return (
     <button name={name} onClick={handleClick}>
-      <img src="Mirada juzgando.jpg" alt="" />
+      <img
+        src="./img jpg/Mirada juzgando.jpg"
+        alt=""
+        onClick={handleImageClick}
+      />
       {name}
     </button>
   );
