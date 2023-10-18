@@ -35,3 +35,15 @@ export default App
 *De lo contrario, la variable mostrará 'undefined' 
 *como valor. 
 */
+
+/**
+ * Respuesta al ejercicio 30:
+ * En este componente, empleamos una función de ejecución inmediata. 
+ * Sin embargo, también podríamos lograr el mismo resultado utilizando una 
+ * función que devuelva un valor, como por ejemplo, setCounter(prevCounter => prevCounter + 1). 
+ * Ambos enfoques nos llevan al resultado deseado. 
+ * La elección entre estas dos variantes depende de las distintas situaciones que puedan surgir a
+ * medida que trabajemos en más proyectos y ejercicios. La diferencia clave entre estas funciones radica en que
+ *  la primera proporciona un valor directamente, mientras que la segunda toma un valor existente y le suma una 
+ * cantidad especificada.
+ */
