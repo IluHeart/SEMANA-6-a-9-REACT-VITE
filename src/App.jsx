@@ -36,6 +36,7 @@ export default App
 *como valor. 
 */
 
+
 /**
  * Respuesta al ejercicio 30:
  * En este componente, empleamos una función de ejecución inmediata. 
@@ -47,3 +48,5 @@ export default App
  *  la primera proporciona un valor directamente, mientras que la segunda toma un valor existente y le suma una 
  * cantidad especificada.
  */
+
+
