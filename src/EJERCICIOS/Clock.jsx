@@ -11,7 +11,7 @@ const Clock = () => {
     const intervalId = setInterval(updateClock, 1000);
 
     return () => clearInterval(intervalId);
-  }, []); 
+  }, []);
 
   return (
     <div>
