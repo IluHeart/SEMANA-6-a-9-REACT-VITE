@@ -2,6 +2,7 @@ import Hello from "./Ejercicios/Hello";
 import Message from "./EJERCICIOS/Message";
 import Bienvenido from "./EJERCICIOS/Bienvenido";
 import AlertClock from "./EJERCICIOS/AlertClock"
+import Counter from "./EJERCICIOS/Counter";
 
 function App() {
   const handleAlertClick = (currentTime) => {
@@ -15,6 +16,7 @@ function App() {
       <Bienvenido name={name} />
       <AlertClock  onClickHandler={handleAlertClick}  />
       {/* Ya lo renderioce en el Ejercicio anterior , ups */}
+      <Counter/>
     </div>
   );
 }
