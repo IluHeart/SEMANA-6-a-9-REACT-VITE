@@ -5,6 +5,9 @@ import AlertClock from "./EJERCICIOS/AlertClock"
 import Counter from "./EJERCICIOS/Counter";
 
 function App() {
+  const initialValue = 0;
+  const incrementAmount = 5;
+
   const handleAlertClick = (currentTime) => {
     alert(`La hora actual es: ${currentTime}`);
   };
@@ -14,9 +17,8 @@ function App() {
       <Hello/>
       <Message/>
       <Bienvenido name={name} />
-      <AlertClock  onClickHandler={handleAlertClick}  />
-      {/* Ya lo renderioce en el Ejercicio anterior , ups */}
-      <Counter/>
+      <AlertClock onClickHandler={handleAlertClick} />
+      <Counter initialValue={initialValue} incrementAmount={incrementAmount} />
     </div>
   );
 }
@@ -36,7 +38,6 @@ export default App
 *como valor. 
 */
 
-
 /**
  * Respuesta al ejercicio 30:
  * En este componente, empleamos una función de ejecución inmediata. 
@@ -48,5 +49,3 @@ export default App
  *  la primera proporciona un valor directamente, mientras que la segunda toma un valor existente y le suma una 
  * cantidad especificada.
  */
-
-

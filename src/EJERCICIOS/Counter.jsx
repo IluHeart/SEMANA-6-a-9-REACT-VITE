@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
+const Counter = ({ initialValue, incrementAmount }) => {
+    const [counter, setCounter] = useState(initialValue);
 
   const incrementCounter = () => {
-    setCounter(counter + 1);
+    setCounter(counter + incrementAmount);
   };
 
   return (
