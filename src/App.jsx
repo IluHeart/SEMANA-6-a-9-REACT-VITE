@@ -10,7 +10,8 @@ function App() {
       <Hello/>
       <Message/>
       <Bienvenido name={name} />
-      <AlertClock/>
+      <AlertClock/> 
+      {/* Ya lo renderioce en el Ejercicio anterior , ups */}
     </div>
   );
 }
