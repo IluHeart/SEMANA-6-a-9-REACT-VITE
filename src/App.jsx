@@ -3,6 +3,7 @@ import Message from "./EJERCICIOS/Message";
 import Bienvenido from "./EJERCICIOS/Bienvenido";
 import AlertClock from "./EJERCICIOS/AlertClock"
 import Counter from "./EJERCICIOS/Counter";
+import Clock from "./EJERCICIOS/Clock";
 
 function App() {
   const initialValue = 0;
@@ -20,6 +21,7 @@ function App() {
       <Bienvenido name={name} />
       <AlertClock onClickHandler={handleAlertClick} />
       <Counter initialValue={initialValue} decrementAmount={decrementAmount} incrementAmount={incrementAmount}  />
+      <Clock/>
     </div>
   );
 }
