@@ -1,6 +1,7 @@
 import Hello from "./Ejercicios/Hello";
 import Message from "./EJERCICIOS/Message";
 import Bienvenido from "./EJERCICIOS/Bienvenido";
+import AlertClock from "./EJERCICIOS/AlertClock"
 
 function App() {
   let name = "John";
@@ -9,6 +10,7 @@ function App() {
       <Hello/>
       <Message/>
       <Bienvenido name={name} />
+      <AlertClock/>
     </div>
   );
 }
