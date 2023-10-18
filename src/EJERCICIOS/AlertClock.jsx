@@ -1,14 +1,13 @@
-const AlertClock = () => {
-    const handleButtonClick = () => {
-      const currentTime = new Date().toLocaleTimeString();
-      alert(`Current time is: ${currentTime}`);
-    };
-  
-    return (
-      <div>
-        <button onClick={handleButtonClick}>Show Current Time</button>
-      </div>
-    );
+const AlertClock = ({ onClickHandler }) => {
+  const handleButtonClick = () => {
+    const currentTime = new Date().toLocaleTimeString();
+    onClickHandler(currentTime);
   };
-  
-  export default AlertClock;
+  return (
+    <div>
+      <button onClick={handleButtonClick}>Show Current Time</button>
+    </div>
+  );
+};
+
+export default AlertClock;

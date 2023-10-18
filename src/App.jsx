@@ -4,13 +4,16 @@ import Bienvenido from "./EJERCICIOS/Bienvenido";
 import AlertClock from "./EJERCICIOS/AlertClock"
 
 function App() {
-  let name = "John";
+  const handleAlertClick = (currentTime) => {
+    alert(`La hora actual es: ${currentTime}`);
+  };
+  const name = "Ilies";
   return (
     <div className="App">
       <Hello/>
       <Message/>
       <Bienvenido name={name} />
-      <AlertClock/> 
+      <AlertClock  onClickHandler={handleAlertClick}  />
       {/* Ya lo renderioce en el Ejercicio anterior , ups */}
     </div>
   );
