@@ -6,6 +6,7 @@ import Counter from "./EJERCICIOS/Counter";
 import Clock from "./EJERCICIOS/Clock";
 import MouseClicker from "./EJERCICIOS/MouseClicker";
 import MultiButton from "./EJERCICIOS/MultiButton"
+import InteractiveWelcome from "./EJERCICIOS/InteractiveWelcome"
 
 function App() {
   const initialValue = 0;
@@ -15,17 +16,18 @@ function App() {
   const handleAlertClick = (currentTime) => {
     alert(`La hora actual es: ${currentTime}`);
   };
-  const name = "Ilies";
+  const name = "John";
   return (
     <div className="App">
       <Hello/>
       <Message/>
-      <Bienvenido name={name} />
+      <Bienvenido name={name} age={69} />
       <AlertClock onClickHandler={handleAlertClick} />
       <Counter initialValue={initialValue} decrementAmount={decrementAmount} incrementAmount={incrementAmount}  />
       <Clock/>
       <MouseClicker name="one" />
       <MultiButton/>
+      <InteractiveWelcome/>
     </div>
   );
 }
