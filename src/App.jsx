@@ -8,6 +8,7 @@ import MouseClicker from "./EJERCICIOS/MouseClicker";
 import MultiButton from "./EJERCICIOS/MultiButton"
 import InteractiveWelcome from "./EJERCICIOS/InteractiveWelcome"
 import Login from "./EJERCICIOS/Login"
+import UncontrolledLogin from "./EJERCICIOS/UncontrolledLogin"
 
 function App() {
   const handleLogin = (userData) => {
@@ -33,6 +34,7 @@ function App() {
       <MultiButton/>
       <InteractiveWelcome/>
       <Login onLogin={handleLogin} />
+      <UncontrolledLogin onLogin={handleLogin}/>
     </div>
   );
 }
