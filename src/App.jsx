@@ -7,6 +7,7 @@ import Counter from "./EJERCICIOS/Counter";
 function App() {
   const initialValue = 0;
   const incrementAmount = 5;
+  const decrementAmount = 1;
 
   const handleAlertClick = (currentTime) => {
     alert(`La hora actual es: ${currentTime}`);
@@ -18,7 +19,7 @@ function App() {
       <Message/>
       <Bienvenido name={name} />
       <AlertClock onClickHandler={handleAlertClick} />
-      <Counter initialValue={initialValue} incrementAmount={incrementAmount} />
+      <Counter initialValue={initialValue} decrementAmount={decrementAmount} incrementAmount={incrementAmount}  />
     </div>
   );
 }
