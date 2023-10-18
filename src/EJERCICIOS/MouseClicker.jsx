@@ -15,7 +15,6 @@ const MouseClicker = ({ name }) => {
         alt=""
         onClick={handleImageClick}
       />
-      {name}
     </button>
   );
 };
