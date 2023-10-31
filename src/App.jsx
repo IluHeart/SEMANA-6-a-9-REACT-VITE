@@ -9,7 +9,8 @@ import MultiButton from "./Ejercicios/MultiButton";
 import InteractiveWelcome from "./Ejercicios/InteractiveWelcome";
 import Login from "./Ejercicios/Login";
 import UncontrolledLogin from "./Ejercicios/UncontrolledLogin";
-import FocusableInput from "./Ejercicios/FocusableInput";
+import FocusableInput from "./EJERCICIOS/FocusableInput";
+import FirstMount from "./Ejercicios/FirstMount";
 
 function App() {
   const handleLogin = (userData) => {
@@ -41,6 +42,7 @@ function App() {
       <Login onLogin={handleLogin} />
       <UncontrolledLogin onLogin={handleLogin} />
       <FocusableInput/>
+      <FirstMount/>
     </div>
   );
 }
