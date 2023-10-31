@@ -93,3 +93,4 @@ export default Login;
  * ¿Cuál es la API estándar? 
  * Respuesta: La API estándar es una interfaz de programación de aplicaciones que sigue un conjunto de especificaciones y reglas ampliamente aceptadas. Estas especificaciones son definidas y mantenidas por organizaciones reconocidas y generalmente están disponibles públicamente para que los desarrolladores las utilicen.
  */
+
