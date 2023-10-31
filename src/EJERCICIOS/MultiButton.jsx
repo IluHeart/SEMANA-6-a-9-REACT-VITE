@@ -2,7 +2,7 @@ const MultiButton = () => {
     const handleClick = (event) => {
       console.log("Boton click:", event.target.name);
     };
-  
+
     return (
       <div>
         <button name="one" onClick={handleClick}>Button One</button>

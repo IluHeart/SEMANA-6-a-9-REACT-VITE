@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 const Counter = ({ initialValue, incrementAmount, decrementAmount }) => {
@@ -6,9 +7,11 @@ const Counter = ({ initialValue, incrementAmount, decrementAmount }) => {
   useEffect(() => {
     console.log("Valor actual del contador:", counter);
   }, [counter]);
+
   const incrementCounter = () => {
     setCounter(counter + incrementAmount);
   };
+
   const decrementCounter = () => {
     setCounter(counter - decrementAmount);
   };
