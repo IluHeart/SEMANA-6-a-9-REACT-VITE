@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState } from "react";
 import Hello from "./Ejercicios/Hello";
 import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
@@ -17,6 +17,7 @@ import TodoList from "./Ejercicios/TodoList";
 import Container from "./Ejercicios/Container";
 import { LanguageProvider } from "./Ejercicios/LanguageContext";
 import LanguageSelector from "./Ejercicios/LanguageSelector";
+import GithubUser from "./Ejercicios/GithubUser";
 
 function App() {
   const handleLogin = (userData) => {
@@ -73,6 +74,7 @@ function App() {
       <Container title="Contenedor">
         <p>Container</p>
       </Container>
+      <GithubUser username="IluHeart" />
     </div>
   );
 }
