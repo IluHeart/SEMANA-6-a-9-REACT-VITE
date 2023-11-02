@@ -7,7 +7,7 @@ const Bienvenido = (props) => {
    const isNameValid = props.name === 'John';
 
   return (
-    <div>
+<div className="bienvenido">
       <p>Bienvenido, {isNameValid ? <strong>{props.name}</strong> : <strong>HipHop</strong>}!</p>
        {isAgeValid && <Edad age={props.age} />}
        <Edad  age={2}/>
