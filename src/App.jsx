@@ -102,3 +102,8 @@ export default App;
  *  la primera proporciona un valor directamente, mientras que la segunda toma un valor existente y le suma una
  * cantidad especificada.
  */
+
+/**
+ * En respuesta al ejercicio del Context 72:
+ * Si elimino el proveedor de Context en este componente, perderé la capacidad de acceder al contexto "Language", lo que resultaría en un valor indefinido.
+ */
