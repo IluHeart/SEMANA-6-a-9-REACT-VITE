@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../styles/TodoList.module.scss"
 
 const TodoList = () => {
   const [items, setItems] = useState([]);
@@ -21,7 +22,7 @@ const TodoList = () => {
 
   return (
     <div>
-      <ul>
+      <ul className={styles.lista} >
         {items.map((item, index) => (
           <li key={index}>
             {item}
