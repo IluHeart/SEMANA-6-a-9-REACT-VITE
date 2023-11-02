@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useContext } from "react";
 import Hello from "./Ejercicios/Hello";
 import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
@@ -13,7 +14,9 @@ import FocusableInput from "./EJERCICIOS/FocusableInput";
 import FirstMount from "./Ejercicios/FirstMount";
 import Colors from "./Ejercicios/Colors";
 import TodoList from "./Ejercicios/TodoList";
-import Container from "./Ejercicios/Container"
+import Container from "./Ejercicios/Container";
+import { LanguageProvider } from "./Ejercicios/LanguageContext";
+import LanguageSelector from "./Ejercicios/LanguageSelector";
 
 function App() {
   const handleLogin = (userData) => {
@@ -33,8 +36,20 @@ function App() {
     { id: 3, name: "Dorado" },
     { id: 4, name: "Verde" },
   ];
+
+  const [language, setLanguage] = useState("en");
+
+  const handleLanguageChange = (event) => {
+    console.log("Selected language:", event.target.value);
+    setLanguage(event.target.value);
+  };
+
   return (
     <div className="App">
+      <LanguageProvider value={language}>
+        <LanguageSelector />
+        <Clock />
+      </LanguageProvider>
       <Hello />
       <Message />
       <Bienvenido name={name} age={69} />
@@ -50,14 +65,14 @@ function App() {
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
       <UncontrolledLogin onLogin={handleLogin} />
-      <FocusableInput/>
-      <FirstMount/>
+      <FocusableInput />
+      <FirstMount />
       <h1>Lista de colores</h1>
-      <Colors items={colorList}/>
-      <TodoList/>
+      <Colors items={colorList} />
+      <TodoList />
       <Container title="Contenedor">
-      <p>Container</p>
-    </Container>
+        <p>Container</p>
+      </Container>
     </div>
   );
 }
