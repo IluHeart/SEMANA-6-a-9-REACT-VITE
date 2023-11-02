@@ -28,7 +28,7 @@ const UncontrolledLogin = ({ onLogin }) => {
       <div>
         <label htmlFor="usernames">Username:</label>
         <input
-          class="border rounded p-4 bg-pink-200"
+          className="border rounded p-4 bg-pink-200"
           type="text"
           id="usernames"
           ref={usernameRef}
@@ -37,7 +37,7 @@ const UncontrolledLogin = ({ onLogin }) => {
       <div>
         <label htmlFor="password">Password:</label>
         <input
-          class="border rounded p-4 bg-pink-200"
+          className="border rounded p-4 bg-pink-200"
           type="password"
           id="passwords"
           ref={passwordRef}
@@ -49,11 +49,11 @@ const UncontrolledLogin = ({ onLogin }) => {
           Remember Me
         </label>
       </div>
-      <button class="m-4 p-6 bg-blue-500 text-white" type="submit">
+      <button className="m-4 p-6 bg-blue-500 text-white" type="submit">
         Login
       </button>
       <button
-        class="m-4 p-6 bg-blue-500 text-white"
+        className="m-4 p-6 bg-blue-500 text-white"
         type="button"
         onClick={handleReset}
       >

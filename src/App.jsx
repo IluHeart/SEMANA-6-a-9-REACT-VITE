@@ -55,7 +55,7 @@ function App() {
       <h1>Lista de colores</h1>
       <Colors items={colorList}/>
       <TodoList/>
-      <Container>
+      <Container title="Contenedor">
       <p>Container</p>
     </Container>
     </div>
