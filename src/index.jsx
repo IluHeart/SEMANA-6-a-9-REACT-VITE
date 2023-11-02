@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom';
-import './assets/index.scss';
-import Bienvenido from './Ejercicios/Bienvenido';
-import App from './App';
+import ReactDOM from "react-dom";
+import { createRoot } from "react-dom";
+import "./index.scss";
+import Bienvenido from "./Ejercicios/Bienvenido";
+import App from "./App";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 ReactDOM.render(<Bienvenido className="welcome" name="John" age={25} />, root);
 
