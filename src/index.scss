@@ -1,7 +1,7 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import 'bootstrap/scss/bootstrap';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "bootstrap/scss/bootstrap";
 
 .bienvenido {
   background-color: rgb(5, 162, 126);
@@ -29,4 +29,10 @@
   h2 {
     color: #111232;
   }
+}
+
+.container-co {
+  padding: 20px;
+  border: 1px dashed rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
