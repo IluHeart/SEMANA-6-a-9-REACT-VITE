@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Edad from "./Edad"
 
 const Bienvenido = (props) => {
