@@ -6,6 +6,7 @@ import App from "./App";
 
 const root = document.getElementById("root");
 
+// eslint-disable-next-line react/no-deprecated
 ReactDOM.render(<Bienvenido className="welcome" name="John" age={25} />, root);
 
 const appRoot = createRoot(root);
