@@ -31,3 +31,6 @@ const handleAdditem = () => {
 };
 
 export default TodoList;
+
+// En referencia al ejercicio 57:
+// mi componente borraría el campo de entrada al hacer clic en el botón para agregar un elemento.
