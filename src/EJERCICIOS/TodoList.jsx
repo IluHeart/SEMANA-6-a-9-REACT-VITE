@@ -4,13 +4,15 @@ const TodoList = () => {
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
 
-
-const handleAdditem = () => {
-  if (newItem.trim() !== "") {
-    setItems([...items, newItem]);
-    setNewItem("");
-  }
-};
+  const handleAdditem = () => {
+    if (newItem.trim() !== "") {
+      setItems([...items, newItem]);
+      setNewItem("");
+    }
+  };
+  const handleResetItems = () => {
+    setItems([]);
+  };
   return (
     <div>
       <ul>
@@ -26,6 +28,7 @@ const handleAdditem = () => {
       />
 
       <button onClick={handleAdditem}>Agregar</button>
+      <button onClick={handleResetItems}>Reset</button>
     </div>
   );
 };
