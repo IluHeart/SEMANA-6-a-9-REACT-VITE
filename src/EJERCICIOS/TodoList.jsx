@@ -13,11 +13,20 @@ const TodoList = () => {
   const handleResetItems = () => {
     setItems([]);
   };
+
+  const handleRemoveItem = (index) => {
+    const updatedItems = items.filter((_, i) => i !== index);
+    setItems(updatedItems);
+  };
+
   return (
     <div>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            {item}
+            <button onClick={() => handleRemoveItem(index)}>Remove</button>
+          </li>
         ))}
       </ul>
       <input
