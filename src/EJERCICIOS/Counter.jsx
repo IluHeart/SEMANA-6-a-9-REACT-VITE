@@ -1,12 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 const Counter = ({ initialValue, incrementAmount, decrementAmount }) => {
   const [counter, setCounter] = useState(initialValue);
+  const cambiarDireccionRef = useRef(null);
+
   useEffect(() => {
-    console.log("Valor actual del contador:", counter);
-  }, [counter]);
+    if (counter > initialValue) {
+      cambiarDireccionRef.current = "up";
+    } else if (counter < initialValue) {
+      cambiarDireccionRef.current = "down";
+    }
+    if (cambiarDireccionRef.current !== null) {
+      console.log("Dirección Cambiada", cambiarDireccionRef.current);
+    }
+  }, [counter, initialValue]);
 
   const incrementCounter = () => {
     setCounter(counter + incrementAmount);
