@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Hello from "./Ejercicios/Hello";
 import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
@@ -17,7 +16,7 @@ import TodoList from "./Ejercicios/TodoList";
 import Container from "./Ejercicios/Container";
 import { LanguageProvider } from "./Ejercicios/LanguageContext";
 import LanguageSelector from "./Ejercicios/LanguageSelector";
-import GithubUser from "./Ejercicios/GithubUser";
+// import GithubUser from "./Ejercicios/GithubUser";
 
 function App() {
   const handleLogin = (userData) => {
@@ -38,16 +37,9 @@ function App() {
     { id: 4, name: "Verde" },
   ];
 
-  const [language, setLanguage] = useState("en");
-
-  const handleLanguageChange = (event) => {
-    console.log("Selected language:", event.target.value);
-    setLanguage(event.target.value);
-  };
-
   return (
     <div className="App">
-      <LanguageProvider value={language}>
+      <LanguageProvider>
         <LanguageSelector />
         <Clock />
       </LanguageProvider>
@@ -74,7 +66,7 @@ function App() {
       <Container title="Contenedor">
         <p>Container</p>
       </Container>
-      <GithubUser username="IluHeart" />
+      {/* <GithubUser username="IluHeart" /> */}
     </div>
   );
 }

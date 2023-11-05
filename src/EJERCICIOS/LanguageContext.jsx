@@ -2,9 +2,10 @@ import { createContext, useState } from 'react';
 
 const LanguageContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
-  console.log('Provided language:', language);
+  const [Language, setLanguage] = useState('en');
+  console.log('Provided language:', Language);
 
   const changeLanguage = (newLanguage) => {
     setLanguage(newLanguage);
@@ -12,7 +13,7 @@ const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, changeLanguage }}>
+    <LanguageContext.Provider value={{ Language, changeLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
