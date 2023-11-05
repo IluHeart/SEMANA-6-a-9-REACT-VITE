@@ -20,6 +20,7 @@ import GithubUser from "./Ejercicios/GithubUser";
 import GithubUsers from "./Ejercicios/GithubUsers";
 import LoginForm from "./Ejercicios/LoginForm";
 import CurrentLocation from "./Ejercicios/CurrentLocation";
+import FilteredList from "./Ejercicios/FilteredList";
 
 function App() {
   const handleLogin = (userData) => {
@@ -38,6 +39,13 @@ function App() {
     { id: 2, name: "Negro" },
     { id: 3, name: "Dorado" },
     { id: 4, name: "Verde" },
+  ];
+
+  const studentsList = [
+    { id: 1, name: "Ilies", age: 21 },
+    { id: 2, name: "Nico", age: 37 },
+    { id: 3, name: "Jennifer", age: 10 },
+    { id: 3, name: "Wilmer", age: 25 },
   ];
 
   return (
@@ -73,6 +81,7 @@ function App() {
       <GithubUsers />
       <LoginForm onLogin={handleLogin} />
       <CurrentLocation />
+      <FilteredList list={studentsList} />
     </div>
   );
 }
