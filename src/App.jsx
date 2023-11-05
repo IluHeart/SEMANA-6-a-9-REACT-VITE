@@ -18,11 +18,11 @@ import Counter from "./Ejercicios/Counter";
 // import { LanguageProvider } from "./Ejercicios/LanguageContext";
 // import LanguageSelector from "./Ejercicios/LanguageSelector";
 // import GithubUser from "./Ejercicios/GithubUser";
-// import GithubUsers from "./Ejercicios/GithubUsers";
+import GithubUsers from "./Ejercicios/GithubUsers";
 // import LoginForm from "./Ejercicios/LoginForm";
 // import CurrentLocation from "./Ejercicios/CurrentLocation";
 // import FilteredList from "./Ejercicios/FilteredList";
-import ShowGithubUser from "./Ejercicios/ShowGithubUser";
+// import ShowGithubUser from "./Ejercicios/ShowGithubUser";
 import NotFound from "./Ejercicios/NotFound";
 import "./index.scss";
 
@@ -63,7 +63,7 @@ function App() {
             <Link to="/counter">Counter</Link>
           </li>
           <li>
-            <Link to="/users/:username">Show Github User</Link>
+            <Link to="/users">Show Github Users</Link>
           </li>
         </ul>
       </nav>
@@ -79,7 +79,7 @@ function App() {
             />
           }
         />
-        <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/users/*" element={<GithubUsers />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {/* <LanguageProvider>

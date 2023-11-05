@@ -5,7 +5,7 @@ const ShowGithubUser = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate("/");
+    navigate('/users');
   };
 
   return (
