@@ -23,6 +23,7 @@ import Counter from "./Ejercicios/Counter";
 // import CurrentLocation from "./Ejercicios/CurrentLocation";
 // import FilteredList from "./Ejercicios/FilteredList";
 import ShowGithubUser from "./Ejercicios/ShowGithubUser";
+import NotFound from "./Ejercicios/NotFound";
 import "./index.scss";
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
           }
         />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {/* <LanguageProvider>
         <LanguageSelector />
