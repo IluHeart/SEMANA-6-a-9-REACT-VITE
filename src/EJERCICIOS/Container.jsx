@@ -1,26 +1,25 @@
 import { useState } from "react";
-import "../index.scss"
-
+import "../index.scss";
 
 const Container = ({ title, children }) => {
-    const [isCollapsed, setIsCollapsed] = useState(false);
-  
-    const handleToggleCollapse = () => {
-      setIsCollapsed(!isCollapsed);
-    };
-  
-    return (
-      <div className={`container-co ${isCollapsed ? "collapsed" : ""}`}>
-        <div
-          className="flex justify-between cursor-pointer"
-          onClick={handleToggleCollapse}
-        >
-          {title && <h2 className="text-xl mb-4">{title}</h2>}
-          <span>{isCollapsed ? "▼" : "▲"}</span>
-        </div>
-        {!isCollapsed && children}
-      </div>
-    );
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const handleToggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
   };
-  
-  export default Container;
+
+  return (
+    <div className={`container-co ${isCollapsed ? "collapsed" : ""}`}>
+      <div
+        className="flex justify-between cursor-pointer"
+        onClick={handleToggleCollapse}
+      >
+        {title && <h2 className="text-xl mb-4">{title}</h2>}
+        <span>{isCollapsed ? "▼" : "▲"}</span>
+      </div>
+      {!isCollapsed && children}
+    </div>
+  );
+};
+
+export default Container;

@@ -1,5 +1,5 @@
 const CounterDisplay = ({ count }) => {
-    return <h2>Contador: {count}</h2>;
-  };
-  
-  export default CounterDisplay;
+  return <h2>Contador: {count}</h2>;
+};
+
+export default CounterDisplay;

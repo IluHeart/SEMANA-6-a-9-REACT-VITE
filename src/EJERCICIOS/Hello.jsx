@@ -1,12 +1,12 @@
 import Message from "./Message";
 
 function Hello() {
-    return (
+  return (
     <div>
       <h2>Hola, Mundo!</h2>
-      <Message/>
+      <Message />
     </div>
-    );
-  }
-  // PENSE QUE EL EJERCICIO 12 ERA ESTO :D , pero vamos que lo he entendido
-  export default Hello;
+  );
+}
+// PENSE QUE EL EJERCICIO 12 ERA ESTO :D , pero vamos que lo he entendido
+export default Hello;

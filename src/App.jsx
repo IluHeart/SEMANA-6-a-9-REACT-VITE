@@ -22,9 +22,9 @@ function App() {
   const handleLogin = (userData) => {
     console.log("Login data:", userData);
   };
-  const initialValue = 0;
-  const incrementAmount = 1;
-  const decrementAmount = 1;
+  const initialValue = 100;
+  const incrementAmount = 20;
+  const decrementAmount = 20;
 
   const handleAlertClick = (currentTime) => {
     alert(`La hora actual es: ${currentTime}`);

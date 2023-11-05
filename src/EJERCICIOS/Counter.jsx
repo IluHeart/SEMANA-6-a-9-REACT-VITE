@@ -1,41 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, useRef } from "react";
 import CounterDisplay from "./CounterDisplay";
+import useCounter from "./useCounter.jsx";
 import "../index.scss";
 
 const Counter = ({ initialValue, incrementAmount, decrementAmount }) => {
-  const [counter, setCounter] = useState(initialValue);
-  const cambiarDireccionRef = useRef(null);
-
-  useEffect(() => {
-    if (counter > initialValue) {
-      cambiarDireccionRef.current = "up";
-    } else if (counter < initialValue) {
-      cambiarDireccionRef.current = "down";
-    }
-    if (cambiarDireccionRef.current !== null) {
-      console.log("Dirección Cambiada", cambiarDireccionRef.current);
-    }
-  }, [counter, initialValue]);
-
-  const incrementCounter = () => {
-    setCounter(counter + incrementAmount);
-  };
-
-  const decrementCounter = () => {
-    setCounter(counter - decrementAmount);
-  };
-
-  const resetCounter = () => {
-    setCounter(initialValue);
-  };
+  const { counter, increment, decrement, reset } = useCounter(
+    initialValue,
+    incrementAmount,
+    decrementAmount
+  );
 
   return (
     <div className="counter-display">
       <CounterDisplay count={counter} />
-      <button onClick={incrementCounter}>Incrementar</button>
-      <button onClick={decrementCounter}>Decrementar</button>
-      <button onClick={resetCounter}>Reiniciar</button>
+      <button onClick={increment}>Incrementar</button>
+      <button onClick={decrement}>Decrementar</button>
+      <button onClick={reset}>Reiniciar</button>
     </div>
   );
 };

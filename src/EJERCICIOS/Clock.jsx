@@ -5,7 +5,7 @@ import "../index.scss";
 const Clock = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const Language = useContext(LanguageContext);
-  console.log(Language)
+  console.log(Language);
 
   useEffect(() => {
     console.log("Componente Clock montado");
@@ -23,7 +23,12 @@ const Clock = () => {
   }, [Language]);
 
   const getTimeInLanguage = () => {
-    const options = { hour12: true, hour: "2-digit", minute: "2-digit", second: '2-digit' };
+    const options = {
+      hour12: true,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
 
     if (Language === "es") {
       return "Hola Actual: " + currentTime.toLocaleTimeString("es-ES", options);
