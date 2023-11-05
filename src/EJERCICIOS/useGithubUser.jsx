@@ -10,12 +10,17 @@ const fetchGithubUser = (username) => {
 };
 
 const useGithubUser = (username) => {
-  const { data: user, error } = useSWR(username, fetchGithubUser);
+  const { data: user, error, revalidate } = useSWR(username, fetchGithubUser);
+
+  const reloadUser = () => {
+    revalidate();
+  };
 
   return {
     user,
     error,
     loading: !user && !error,
+    reloadUser,
   };
 };
 
