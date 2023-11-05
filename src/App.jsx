@@ -1,4 +1,6 @@
+import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
+import { SWRConfig } from "swr";
 // import Hello from "./Ejercicios/Hello";
 // import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
@@ -54,68 +56,44 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/counter">Counter</Link>
-          </li>
-          <li>
-            <Link to="/users">Show Github Users</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Bienvenido name={name} age={69} />} />
-        <Route
-          path="/counter"
-          element={
-            <Counter
-              initialValue={initialValue}
-              incrementAmount={incrementAmount}
-              decrementAmount={decrementAmount}
-            />
-          }
-        />
-        <Route path="/users" element={<GithubUsers />}>
-          <Route index element={<p>Add a user and select it</p>} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      {/* <LanguageProvider>
-        <LanguageSelector />
-        <Clock />
-      </LanguageProvider>
-      <Hello />
-      <Message />
-      <Bienvenido name={name} age={69} />
-      <AlertClock onClickHandler={handleAlertClick} />
-      <Counter
-        initialValue={initialValue}
-        decrementAmount={decrementAmount}
-        incrementAmount={incrementAmount}
-      />
-      <Clock />
-      <MouseClicker name="one" />
-      <MultiButton />
-      <InteractiveWelcome />
-      <Login onLogin={handleLogin} />
-      <UncontrolledLogin onLogin={handleLogin} />
-      <FocusableInput />
-      <FirstMount />
-      <h1>Lista de colores</h1>
-      <Colors items={colorList} />
-      <TodoList />
-      <Container title="Contenedor">
-        <p>Container</p>
-      </Container>
-      <GithubUser username="IluHeart" />
-      <GithubUsers />
-      <LoginForm onLogin={handleLogin} />
-      <CurrentLocation />
-      <FilteredList list={studentsList} /> */}
+      <SWRConfig
+        value={{
+          fetcher: (url) => fetch(url).then((res) => res.json()), // Valor predeterminado para el fetcher
+          // Puedes establecer más opciones globales aquí
+        }}
+      >
+        <nav className="navbar">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/counter">Counter</Link>
+            </li>
+            <li>
+              <Link to="/users">Show Github Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Bienvenido name={name} age={69} />} />
+          <Route
+            path="/counter"
+            element={
+              <Counter
+                initialValue={initialValue}
+                incrementAmount={incrementAmount}
+                decrementAmount={decrementAmount}
+              />
+            }
+          />
+          <Route path="/users" element={<GithubUsers />}>
+            <Route index element={<p>Add a user and select it</p>} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </SWRConfig>
     </div>
   );
 }
