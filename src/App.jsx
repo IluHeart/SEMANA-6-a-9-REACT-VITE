@@ -22,6 +22,7 @@ import Counter from "./Ejercicios/Counter";
 // import LoginForm from "./Ejercicios/LoginForm";
 // import CurrentLocation from "./Ejercicios/CurrentLocation";
 // import FilteredList from "./Ejercicios/FilteredList";
+import ShowGithubUser from "./Ejercicios/ShowGithubUser";
 
 function App() {
   // const handleLogin = (userData) => {
@@ -31,6 +32,7 @@ function App() {
   const incrementAmount = 20;
   const decrementAmount = 20;
 
+  const username = "IluHeart"
   // const handleAlertClick = (currentTime) => {
   //   alert(`La hora actual es: ${currentTime}`);
   // };
@@ -49,6 +51,8 @@ function App() {
   //   { id: 3, name: "Wilmer", age: 25 },
   // ];
 
+
+
   return (
     <div className="App">
       <Routes>
@@ -63,6 +67,7 @@ function App() {
             />
           }
         />
+        <Route path="/users/:username" element={<ShowGithubUser />} />
       </Routes>
       {/* <LanguageProvider>
         <LanguageSelector />
