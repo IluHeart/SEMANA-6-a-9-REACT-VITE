@@ -16,7 +16,7 @@ import TodoList from "./Ejercicios/TodoList";
 import Container from "./Ejercicios/Container";
 import { LanguageProvider } from "./Ejercicios/LanguageContext";
 import LanguageSelector from "./Ejercicios/LanguageSelector";
-// import GithubUser from "./Ejercicios/GithubUser";
+import GithubUser from "./Ejercicios/GithubUser";
 
 function App() {
   const handleLogin = (userData) => {
@@ -66,7 +66,7 @@ function App() {
       <Container title="Contenedor">
         <p>Container</p>
       </Container>
-      {/* <GithubUser username="IluHeart" /> */}
+      <GithubUser username="IluHeart" />
     </div>
   );
 }
