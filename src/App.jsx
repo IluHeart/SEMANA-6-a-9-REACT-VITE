@@ -1,8 +1,9 @@
+import { Route, Routes } from "react-router-dom";
 // import Hello from "./Ejercicios/Hello";
 // import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
 // import AlertClock from "./Ejercicios/AlertClock";
-// import Counter from "./Ejercicios/Counter";
+import Counter from "./Ejercicios/Counter";
 // import Clock from "./Ejercicios/Clock";
 // import MouseClicker from "./Ejercicios/MouseClicker";
 // import MultiButton from "./Ejercicios/MultiButton";
@@ -26,9 +27,9 @@ function App() {
   // const handleLogin = (userData) => {
   //   console.log("Login data:", userData);
   // };
-  // const initialValue = 100;
-  // const incrementAmount = 20;
-  // const decrementAmount = 20;
+  const initialValue = 100;
+  const incrementAmount = 20;
+  const decrementAmount = 20;
 
   // const handleAlertClick = (currentTime) => {
   //   alert(`La hora actual es: ${currentTime}`);
@@ -50,7 +51,19 @@ function App() {
 
   return (
     <div className="App">
-      <Bienvenido name={name} age={69}/>
+      <Routes>
+        <Route path="/" element={<Bienvenido name={name} age={69} />} />
+        <Route
+          path="/counter"
+          element={
+            <Counter
+              initialValue={initialValue}
+              incrementAmount={incrementAmount}
+              decrementAmount={decrementAmount}
+            />
+          }
+        />
+      </Routes>
       {/* <LanguageProvider>
         <LanguageSelector />
         <Clock />
