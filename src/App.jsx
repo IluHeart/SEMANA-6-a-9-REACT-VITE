@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 // import Hello from "./Ejercicios/Hello";
 // import Message from "./Ejercicios/Message.jsx";
 import Bienvenido from "./Ejercicios/Bienvenido";
@@ -23,6 +23,7 @@ import Counter from "./Ejercicios/Counter";
 // import CurrentLocation from "./Ejercicios/CurrentLocation";
 // import FilteredList from "./Ejercicios/FilteredList";
 import ShowGithubUser from "./Ejercicios/ShowGithubUser";
+import "./index.scss";
 
 function App() {
   // const handleLogin = (userData) => {
@@ -32,7 +33,6 @@ function App() {
   const incrementAmount = 20;
   const decrementAmount = 20;
 
-  const username = "IluHeart"
   // const handleAlertClick = (currentTime) => {
   //   alert(`La hora actual es: ${currentTime}`);
   // };
@@ -51,10 +51,21 @@ function App() {
   //   { id: 3, name: "Wilmer", age: 25 },
   // ];
 
-
-
   return (
     <div className="App">
+      <nav className="navbar">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/counter">Counter</Link>
+          </li>
+          <li>
+            <Link to="/users/:username">Show Github User</Link>
+          </li>
+        </ul>
+      </nav>
       <Routes>
         <Route path="/" element={<Bienvenido name={name} age={69} />} />
         <Route
